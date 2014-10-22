@@ -1,0 +1,24 @@
+<header>
+	<div id="header"><h1 id="logo">{{myName}}</h1>
+		<nav>
+			<div id="nav">
+				<h3> <a ng-click="goToAbout()">About</h3>
+				<h3>Projects</a></h3>
+			</div>
+		</nav>
+	</div>
+</header>
+<section>
+	<div id="projects" ng-repeat="project in projects | orderBy:reverse">
+		<a href="#/details/{{project.id}}"><img ng-src="{{project.thumb}}"></a>
+		<span class="projectInfo">
+			<h3>{{project.name}}</h3>
+			<p>{{project.year}}</p>
+		</span>
+	</div>
+</section>
+<!-- <section>
+	<div id="about">
+		<h2>About</h2>
+	</div>	
+</section> -->
